@@ -4,6 +4,570 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Abdullah Telecom | Mobile Shop</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#f5f7fb;
+  color:#111827;
+}
+
+/* NAVBAR */
+.navbar{
+  background:#111827;
+  color:white;
+  padding:15px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:bold;
+}
+
+.logo span{
+  color:#38bdf8;
+}
+
+.navbar a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+  font-size:15px;
+}
+
+/* HERO */
+.hero{
+  min-height:520px;
+  padding:70px 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+  background:
+  radial-gradient(circle at 80% 20%,#2563eb55,transparent 35%),
+  linear-gradient(135deg,#0f172a,#1e3a8a);
+  color:white;
+}
+
+.hero-text{
+  max-width:600px;
+}
+
+.badge{
+  display:inline-block;
+  background:#ffffff18;
+  border:1px solid #ffffff30;
+  padding:8px 15px;
+  border-radius:30px;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-size:48px;
+  line-height:1.15;
+  margin-bottom:18px;
+}
+
+.hero h1 span{
+  color:#38bdf8;
+}
+
+.hero p{
+  color:#dbeafe;
+  font-size:18px;
+  line-height:1.7;
+  margin-bottom:25px;
+}
+
+.buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:14px 22px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+  display:inline-block;
+}
+
+.order{
+  background:#22c55e;
+  color:white;
+}
+
+.products-btn{
+  background:white;
+  color:#111827;
+}
+
+.hero-phone{
+  font-size:150px;
+  filter:drop-shadow(0 15px 25px #0008);
+}
+
+/* OFFER */
+.offer{
+  margin:25px auto;
+  width:90%;
+  max-width:1100px;
+  padding:25px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#2563eb,#7c3aed);
+  color:white;
+  text-align:center;
+  box-shadow:0 10px 30px #0002;
+}
+
+.offer h2{
+  font-size:28px;
+  margin-bottom:8px;
+}
+
+.offer p{
+  font-size:17px;
+}
+
+/* PRODUCTS */
+.section{
+  padding:45px 6%;
+  max-width:1200px;
+  margin:auto;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.title h2{
+  font-size:32px;
+  margin-bottom:8px;
+}
+
+.title p{
+  color:#64748b;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:18px;
+}
+
+.card{
+  background:white;
+  border-radius:18px;
+  padding:25px 15px;
+  text-align:center;
+  box-shadow:0 5px 20px #0000000d;
+  transition:.3s;
+  border:1px solid #e5e7eb;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 12px 30px #0002;
+}
+
+.icon{
+  width:75px;
+  height:75px;
+  margin:auto auto 15px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:20px;
+  background:#eff6ff;
+  font-size:40px;
+}
+
+.card h3{
+  font-size:18px;
+  margin-bottom:7px;
+}
+
+.card p{
+  color:#64748b;
+  font-size:14px;
+}
+
+/* WHY US */
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:18px;
+}
+
+.feature{
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  text-align:center;
+  box-shadow:0 5px 18px #0001;
+}
+
+.feature .big{
+  font-size:38px;
+  margin-bottom:10px;
+}
+
+.feature h3{
+  margin-bottom:7px;
+}
+
+.feature p{
+  color:#64748b;
+  font-size:14px;
+}
+
+/* CONTACT */
+.contact{
+  background:#111827;
+  color:white;
+  padding:45px 20px;
+  text-align:center;
+}
+
+.contact h2{
+  font-size:30px;
+  margin-bottom:12px;
+}
+
+.contact p{
+  color:#cbd5e1;
+  margin:7px;
+}
+
+.phone{
+  display:inline-block;
+  margin-top:15px;
+  background:#22c55e;
+  color:white;
+  padding:13px 22px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+  background:#030712;
+  color:#94a3b8;
+  text-align:center;
+  padding:18px;
+  font-size:14px;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#22c55e;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
+  text-decoration:none;
+  box-shadow:0 5px 20px #0004;
+  z-index:999;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+  .navbar{
+    padding:14px 5%;
+  }
+
+  .navbar nav{
+    display:none;
+  }
+
+  .hero{
+    min-height:500px;
+    text-align:center;
+    justify-content:center;
+    padding:55px 20px;
+  }
+
+  .hero h1{
+    font-size:38px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .buttons{
+    justify-content:center;
+  }
+
+  .hero-phone{
+    display:none;
+  }
+
+  .offer{
+    width:92%;
+  }
+
+  .section{
+    padding:35px 18px;
+  }
+
+  .title h2{
+    font-size:27px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+  <div class="logo">
+    📱 Abdullah <span>Telecom</span>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+  <div class="hero-text">
+
+    <div class="badge">
+      ✨ Welcome to Abdullah Telecom
+    </div>
+
+    <h1>
+      আপনার মোবাইলের<br>
+      <span>সকল প্রয়োজন</span> এক জায়গায়
+    </h1>
+
+    <p>
+      Mobile Cover, Charger, Battery, Headphone,
+      Bluetooth, Sticker এবং Mobile Phone সহ
+      বিভিন্ন মোবাইল এক্সেসরিজ পাওয়া যায়।
+    </p>
+
+    <div class="buttons">
+
+      <a class="btn order"
+         href="order.html">
+        🛒 Order Now
+      </a>
+
+      <a class="btn products-btn"
+         href="#products">
+        🔎 Products দেখুন
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="hero-phone">
+    📱
+  </div>
+
+</section>
+
+
+<!-- OFFER -->
+<section class="offer">
+
+  <h2>🔥 আজকের বিশেষ অফার</h2>
+
+  <p>
+    Premium Mobile Cover ও Accessories
+    সাশ্রয়ী দামে পাওয়া যাচ্ছে!
+  </p>
+
+</section>
+
+
+<!-- PRODUCTS -->
+<section class="section" id="products">
+
+  <div class="title">
+
+    <h2>🛍️ আমাদের পণ্য</h2>
+
+    <p>
+      আপনার পছন্দের মোবাইল Accessories বেছে নিন
+    </p>
+
+  </div>
+
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="icon">📱</div>
+      <h3>Mobile Cover</h3>
+      <p>Premium ও সুন্দর Cover</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🔌</div>
+      <h3>Charger</h3>
+      <p>Quality Charger</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🎧</div>
+      <h3>Headphone</h3>
+      <p>Clear Sound Quality</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🔋</div>
+      <h3>Battery</h3>
+      <p>Mobile Battery</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">✨</div>
+      <h3>Sticker</h3>
+      <p>Mobile Back Sticker</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🎧</div>
+      <h3>Bluetooth</h3>
+      <p>Wireless Accessories</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📲</div>
+      <h3>Mobile Phone</h3>
+      <p>New & Used Mobile</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- WHY US -->
+<section class="section" id="about">
+
+  <div class="title">
+
+    <h2>⭐ কেন Abdullah Telecom?</h2>
+
+    <p>আপনার বিশ্বস্ত মোবাইল শপ</p>
+
+  </div>
+
+
+  <div class="features">
+
+    <div class="feature">
+      <div class="big">💎</div>
+      <h3>Quality Products</h3>
+      <p>ভালো মানের পণ্য দেওয়ার চেষ্টা করি।</p>
+    </div>
+
+    <div class="feature">
+      <div class="big">💰</div>
+      <h3>Best Price</h3>
+      <p>সাশ্রয়ী মূল্যে পণ্য কেনার সুযোগ।</p>
+    </div>
+
+    <div class="feature">
+      <div class="big">🚀</div>
+      <h3>Easy Order</h3>
+      <p>অনলাইনে সহজেই অর্ডার করতে পারবেন।</p>
+    </div>
+
+    <div class="feature">
+      <div class="big">🤝</div>
+      <h3>Trusted Service</h3>
+      <p>কাস্টমার সার্ভিসকে গুরুত্ব দেওয়া হয়।</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+  <h2>📞 আমাদের সাথে যোগাযোগ করুন</h2>
+
+  <p>📍 গোয়ালাবাজার, হারিছ ম্যানশন</p>
+
+  <p>
+    Abdullah Telecom
+  </p>
+
+  <a class="phone"
+     href="tel:01861564433">
+    ☎ 01861564433
+  </a>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+  © 2026 Abdullah Telecom
+  <br>
+  All Rights Reserved
+
+</footer>
+
+
+<!-- WHATSAPP -->
+<a
+  class="whatsapp"
+  href="https://wa.me/8801861564433"
+  target="_blank">
+  💬
+</a>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Abdullah Telecom - Order</title>
 
 <style>
@@ -210,401 +774,3 @@ Abdullah Telecom`;
 
 </body>
   </html>
-<!DOCTYPE html>
-<html lang="bn">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abdullah Telecom</title>
-
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial,sans-serif;
-}
-
-body{
-  background:#f4f6f8;
-  color:#222;
-}
-
-header{
-  background:#111827;
-  color:white;
-  text-align:center;
-  padding:18px 10px;
-  position:sticky;
-  top:0;
-  z-index:10;
-}
-
-header h1{
-  font-size:28px;
-}
-
-header p{
-  margin-top:5px;
-  color:#d1d5db;
-}
-
-nav{
-  margin-top:15px;
-}
-
-nav button{
-  background:white;
-  border:0;
-  padding:10px 18px;
-  margin:4px;
-  border-radius:7px;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-.page{
-  display:none;
-}
-
-.page.active{
-  display:block;
-}
-
-.hero{
-  background:white;
-  text-align:center;
-  padding:45px 18px;
-}
-
-.hero h2{
-  font-size:29px;
-  margin-bottom:12px;
-}
-
-.hero p{
-  color:#666;
-  line-height:1.6;
-}
-
-.btn{
-  display:inline-block;
-  background:#16a34a;
-  color:white;
-  text-decoration:none;
-  padding:12px 20px;
-  border-radius:8px;
-  margin:8px 4px;
-  border:0;
-  font-weight:bold;
-}
-
-.call{
-  background:#2563eb;
-}
-
-.section{
-  max-width:1050px;
-  margin:auto;
-  padding:35px 15px;
-}
-
-.section h2{
-  text-align:center;
-  margin-bottom:25px;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:16px;
-}
-
-.card{
-  background:white;
-  border-radius:13px;
-  padding:15px;
-  text-align:center;
-  box-shadow:0 3px 12px rgba(0,0,0,.08);
-}
-
-.photo{
-  height:160px;
-  background:#eef0f3;
-  border-radius:10px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:65px;
-  margin-bottom:13px;
-}
-
-.card h3{
-  margin-bottom:7px;
-}
-
-.card p{
-  color:#666;
-  font-size:14px;
-  margin-bottom:8px;
-}
-
-.price{
-  font-weight:bold;
-  margin:10px 0;
-}
-
-.order{
-  display:inline-block;
-  background:#16a34a;
-  color:white;
-  text-decoration:none;
-  padding:9px 15px;
-  border-radius:7px;
-}
-
-.contact{
-  background:#111827;
-  color:white;
-  text-align:center;
-  padding:35px 15px;
-}
-
-.contact p{
-  margin:10px;
-}
-
-footer{
-  background:#030712;
-  color:#aaa;
-  text-align:center;
-  padding:18px;
-  text-align:center;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-
-<h1>📱 Abdullah Telecom</h1>
-<p>গোয়ালাবাজার • হারিছ ম্যানশন</p>
-
-<nav>
-<button onclick="showPage('home')">🏠 Home</button>
-<button onclick="showPage('products')">🛍️ Products</button>
-</nav>
-
-</header>
-
-
-<!-- HOME PAGE -->
-
-<div id="home" class="page active">
-
-<section class="hero">
-
-<h2>আপনার বিশ্বস্ত মোবাইল শপ</h2>
-
-<p>
-মোবাইল, কভার, টেম্পার, চার্জার, ব্যাটারি,
-হেডফোন, Bluetooth ও মোবাইল ব্যাক পলি-স্টিকার।
-</p>
-
-<a class="btn call" href="tel:01861564433">
-📞 Call Now
-</a>
-
-<a class="btn" href="https://wa.me/8801861564433">
-💬 WhatsApp
-</a>
-
-</section>
-
-
-<section class="section">
-
-<h2>⭐ জনপ্রিয় পণ্য</h2>
-
-<div class="grid">
-
-<div class="card">
-<div class="photo">📱</div>
-<h3>Mobile Cover</h3>
-<p>বিভিন্ন মডেলের কভার</p>
-</div>
-
-<div class="card">
-<div class="photo">🛡️</div>
-<h3>Tempered Glass</h3>
-<p>প্রিমিয়াম টেম্পার</p>
-</div>
-
-<div class="card">
-<div class="photo">🔌</div>
-<h3>Charger</h3>
-<p>বিভিন্ন ধরনের চার্জার</p>
-</div>
-
-<div class="card">
-<div class="photo">🎧</div>
-<h3>Headphone</h3>
-<p>হেডফোন ও ইয়ারফোন</p>
-</div>
-
-</div>
-
-<div style="text-align:center;margin-top:25px">
-
-<button class="btn" onclick="showPage('products')">
-🛍️ সব পণ্য দেখুন
-</button>
-
-</div>
-
-</section>
-
-
-<section class="contact">
-
-<h2>📍 Abdullah Telecom</h2>
-
-<p>গোয়ালাবাজার, হারিছ ম্যানশন</p>
-<p>📞 01861564433</p>
-
-<a class="btn call" href="tel:01861564433">
-📞 কল করুন
-</a>
-
-<a class="btn" href="https://wa.me/8801861564433">
-💬 WhatsApp
-</a>
-
-</section>
-
-</div>
-
-
-<!-- PRODUCTS PAGE -->
-
-<div id="products" class="page">
-
-<section class="section">
-
-<h2>🛍️ আমাদের সব পণ্য</h2>
-
-<div class="grid">
-
-
-<div class="card">
-<div class="photo">📱</div>
-<h3>Mobile Cover</h3>
-<p>বিভিন্ন মডেলের কভার</p>
-<div class="price">দাম জানতে কল করুন</div>
-<a class="order" href="tel:01861564433">অর্ডার করুন</a>
-</div>
-
-
-<div class="card">
-<div class="photo">🛡️</div>
-<h3>Tempered Glass</h3>
-<p>প্রিমিয়াম টেম্পার</p>
-<div class="price">দাম জানতে কল করুন</div>
-<a class="order" href="tel:01861564433">অর্ডার করুন</a>
-</div>
-
-
-<div class="card">
-<div class="photo">🔌</div>
-<h3>Charger</h3>
-<p>বিভিন্ন ধরনের চার্জার</p>
-<div class="price">দাম জানতে কল করুন</div>
-<a class="order" href="tel:01861564433">অর্ডার করুন</a>
-</div>
-
-
-<div class="card">
-<div class="photo">🎧</div>
-<h3>Headphone</h3>
-<p>হেডফোন ও ইয়ারফোন</p>
-<div class="price">দাম জানতে কল করুন</div>
-<a class="order" href="tel:01861564433">অর্ডার করুন</a>
-</div>
-
-
-<div class="card">
-<div class="photo">🔋</div>
-<h3>Battery</h3>
-<p>বিভিন্ন মোবাইলের ব্যাটারি</p>
-<div class="price">দাম জানতে কল করুন</div>
-<a class="order" href="tel:01861564433">অর্ডার করুন</a>
-</div>
-
-
-<div class="card">
-<div class="photo">✨</div>
-<h3>Back Poly & Sticker</h3>
-<p>মোবাইল ব্যাক পলি ও স্টিকার</p>
-<div class="price">দাম জানতে কল করুন</div>
-<a class="order" href="tel:01861564433">অর্ডার করুন</a>
-</div>
-
-
-<div class="card">
-<div class="photo">🎧</div>
-<h3>Bluetooth</h3>
-<p>বিভিন্ন Bluetooth ডিভাইস</p>
-<div class="price">দাম জানতে কল করুন</div>
-<a class="order" href="tel:01861564433">অর্ডার করুন</a>
-</div>
-
-
-<div class="card">
-<div class="photo">📲</div>
-<h3>Mobile Phone</h3>
-<p>বিভিন্ন মোবাইল ফোন</p>
-<div class="price">দাম জানতে কল করুন</div>
-<a class="order" href="tel:01861564433">অর্ডার করুন</a>
-</div>
-
-
-</div>
-
-<div style="text-align:center;margin-top:30px">
-
-<button class="btn call" onclick="showPage('home')">
-🏠 Home-এ ফিরে যান
-</button>
-
-</div>
-
-</section>
-
-</div>
-
-
-<footer>
-© 2026 Abdullah Telecom
-</footer>
-
-
-<script>
-
-function showPage(page){
-
-document.getElementById("home").classList.remove("active");
-
-document.getElementById("products").classList.remove("active");
-
-document.getElementById(page).classList.add("active");
-
-window.scrollTo(0,0);
-
-}
-
-</script>
-
-</body>
-</html>
-<
