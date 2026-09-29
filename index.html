@@ -117,14 +117,17 @@ nav button{
 }
 
 .photo{
-  height:160px;
+  height:180px;
   background:#eef0f3;
   border-radius:10px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:65px;
+  overflow:hidden;
   margin-bottom:13px;
+}
+
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
 .card h3{
@@ -135,11 +138,6 @@ nav button{
   color:#666;
   font-size:14px;
   margin-bottom:8px;
-}
-
-.price{
-  font-weight:bold;
-  margin:10px 0;
 }
 
 .order{
@@ -167,7 +165,6 @@ footer{
   color:#aaa;
   text-align:center;
   padding:18px;
-  text-align:center;
 }
 </style>
 </head>
@@ -218,25 +215,33 @@ footer{
 <div class="grid">
 
 <div class="card">
-<div class="photo">📱</div>
+<div class="photo">
+<img src="https://images.unsplash.com/photo-1603313011105-320f26a4f6f6?auto=format&fit=crop&w=600&q=80">
+</div>
 <h3>Mobile Cover</h3>
 <p>বিভিন্ন মডেলের কভার</p>
 </div>
 
 <div class="card">
-<div class="photo">🛡️</div>
+<div class="photo">
+<img src="https://images.unsplash.com/photo-1609592424251-0c6e2c5e1a3d?auto=format&fit=crop&w=600&q=80">
+</div>
 <h3>Tempered Glass</h3>
 <p>প্রিমিয়াম টেম্পার</p>
 </div>
 
 <div class="card">
-<div class="photo">🔌</div>
+<div class="photo">
+<img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80">
+</div>
 <h3>Charger</h3>
 <p>বিভিন্ন ধরনের চার্জার</p>
 </div>
 
 <div class="card">
-<div class="photo">🎧</div>
+<div class="photo">
+<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80">
+</div>
 <h3>Headphone</h3>
 <p>হেডফোন ও ইয়ারফোন</p>
 </div>
@@ -284,78 +289,84 @@ footer{
 
 <div class="grid">
 
-
 <div class="card">
-<div class="photo">📱</div>
+<div class="photo">
+<img src="https://images.unsplash.com/photo-1603313011105-320f26a4f6f6?auto=format&fit=crop&w=600&q=80">
+</div>
 <h3>Mobile Cover</h3>
 <p>বিভিন্ন মডেলের কভার</p>
-<div class="price">দাম জানতে কল করুন</div>
 <a class="order" href="tel:01861564433">অর্ডার করুন</a>
 </div>
 
 
 <div class="card">
-<div class="photo">🛡️</div>
+<div class="photo">
+<img src="https://images.unsplash.com/photo-1609592424251-0c6e2c5e1a3d?auto=format&fit=crop&w=600&q=80">
+</div>
 <h3>Tempered Glass</h3>
 <p>প্রিমিয়াম টেম্পার</p>
-<div class="price">দাম জানতে কল করুন</div>
 <a class="order" href="tel:01861564433">অর্ডার করুন</a>
 </div>
 
 
 <div class="card">
-<div class="photo">🔌</div>
+<div class="photo">
+<img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80">
+</div>
 <h3>Charger</h3>
 <p>বিভিন্ন ধরনের চার্জার</p>
-<div class="price">দাম জানতে কল করুন</div>
 <a class="order" href="tel:01861564433">অর্ডার করুন</a>
 </div>
 
 
 <div class="card">
-<div class="photo">🎧</div>
+<div class="photo">
+<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80">
+</div>
 <h3>Headphone</h3>
 <p>হেডফোন ও ইয়ারফোন</p>
-<div class="price">দাম জানতে কল করুন</div>
 <a class="order" href="tel:01861564433">অর্ডার করুন</a>
 </div>
 
 
 <div class="card">
-<div class="photo">🔋</div>
+<div class="photo">
+<img src="https://images.unsplash.com/photo-1609592424251-0c6e2c5e1a3d?auto=format&fit=crop&w=600&q=80">
+</div>
 <h3>Battery</h3>
 <p>বিভিন্ন মোবাইলের ব্যাটারি</p>
-<div class="price">দাম জানতে কল করুন</div>
 <a class="order" href="tel:01861564433">অর্ডার করুন</a>
 </div>
 
 
 <div class="card">
-<div class="photo">✨</div>
+<div class="photo">
+<img src="https://images.unsplash.com/photo-1612810436541-336d9d5d4c4d?auto=format&fit=crop&w=600&q=80">
+</div>
 <h3>Back Poly & Sticker</h3>
 <p>মোবাইল ব্যাক পলি ও স্টিকার</p>
-<div class="price">দাম জানতে কল করুন</div>
 <a class="order" href="tel:01861564433">অর্ডার করুন</a>
 </div>
 
 
 <div class="card">
-<div class="photo">🎧</div>
+<div class="photo">
+<img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=600&q=80">
+</div>
 <h3>Bluetooth</h3>
 <p>বিভিন্ন Bluetooth ডিভাইস</p>
-<div class="price">দাম জানতে কল করুন</div>
 <a class="order" href="tel:01861564433">অর্ডার করুন</a>
 </div>
 
 
 <div class="card">
-<div class="photo">📲</div>
+<div class="photo">
+<img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=600&q=80">
+</div>
 <h3>Mobile Phone</h3>
 <p>বিভিন্ন মোবাইল ফোন</p>
-<div class="price">দাম জানতে কল করুন</div>
 <a class="order" href="tel:01861564433">অর্ডার করুন</a>
 </div>
-
 
 </div>
 
@@ -394,4 +405,4 @@ window.scrollTo(0,0);
 </script>
 
 </body>
-</html>
+  </html>
