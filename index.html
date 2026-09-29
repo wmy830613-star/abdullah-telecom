@@ -1,154 +1,397 @@
-cover.jpg
-tempered.jpg
-charger.jpg
-headphone.jpg
-battery.jpg
-sticker.jpg
-bluetooth.jpg
-mobile.jpg.photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  border-radius:10px;
-}.photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  border-radius:10px;
-}<div class="photo">
-  <img src="cover.jpg" alt="Mobile Cover">
-</div><div class="photo">📱</div><div class="photo">
-  <img src="charger.jpg" alt="Charger">
-</div><div class="photo"><img src="tempered.jpg" alt="Tempered Glass"></div>
-<div class="photo"><img src="headphone.jpg" alt="Headphone"></div>
-<div class="photo"><img src="battery.jpg" alt="Battery"></div>
-<div class="photo"><img src="sticker.jpg" alt="Back Poly & Sticker"></div>
-<div class="photo"><img src="bluetooth.jpg" alt="Bluetooth"></div>
-<div class="photo"><img src="mobile.jpg" alt="Mobile Phone"></div><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Abdullah Telecom</title>
+
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f5f6f8;color:#222}
-header{background:#111827;color:white;padding:22px 16px;text-align:center}
-header h1{margin:0;font-size:28px}header p{margin:7px 0 0;color:#d1d5db}
-.container{max-width:1100px;margin:auto;padding:18px}
-.hero{background:white;border-radius:16px;padding:22px;margin-bottom:18px;text-align:center;box-shadow:0 3px 12px #00000012}
-.hero h2{margin:0 0 8px}.hero p{margin:0;color:#555}
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
-.card{background:white;border-radius:14px;padding:14px;box-shadow:0 3px 10px #00000012}
-.card .pic{height:130px;background:#e5e7eb;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:48px}
-.card h3{font-size:17px;margin:12px 0 6px}.price{font-weight:bold;font-size:18px;margin-bottom:10px}
-button{border:0;border-radius:9px;padding:11px 14px;background:#16a34a;color:white;font-weight:bold;cursor:pointer;width:100%}
-.cart{position:sticky;bottom:10px;background:white;border-radius:14px;padding:16px;margin-top:20px;box-shadow:0 3px 15px #0002}
-.cart h2{margin-top:0}.item{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid #eee}
-.total{font-size:20px;font-weight:bold;margin:12px 0}.checkout{background:#2563eb}
-.note{font-size:13px;color:#666;margin-top:8px}
-input,textarea{width:100%;padding:12px;margin:6px 0 10px;border:1px solid #d1d5db;border-radius:9px;font-size:15px}
-footer{text-align:center;padding:25px;color:#666}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:#f4f6f8;
+  color:#222;
+}
+
+header{
+  background:#111827;
+  color:white;
+  text-align:center;
+  padding:18px 10px;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+header h1{
+  font-size:28px;
+}
+
+header p{
+  margin-top:5px;
+  color:#d1d5db;
+}
+
+nav{
+  margin-top:15px;
+}
+
+nav button{
+  background:white;
+  border:0;
+  padding:10px 18px;
+  margin:4px;
+  border-radius:7px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.page{
+  display:none;
+}
+
+.page.active{
+  display:block;
+}
+
+.hero{
+  background:white;
+  text-align:center;
+  padding:45px 18px;
+}
+
+.hero h2{
+  font-size:29px;
+  margin-bottom:12px;
+}
+
+.hero p{
+  color:#666;
+  line-height:1.6;
+}
+
+.btn{
+  display:inline-block;
+  background:#16a34a;
+  color:white;
+  text-decoration:none;
+  padding:12px 20px;
+  border-radius:8px;
+  margin:8px 4px;
+  border:0;
+  font-weight:bold;
+}
+
+.call{
+  background:#2563eb;
+}
+
+.section{
+  max-width:1050px;
+  margin:auto;
+  padding:35px 15px;
+}
+
+.section h2{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:16px;
+}
+
+.card{
+  background:white;
+  border-radius:13px;
+  padding:15px;
+  text-align:center;
+  box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+.photo{
+  height:160px;
+  background:#eef0f3;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:65px;
+  margin-bottom:13px;
+}
+
+.card h3{
+  margin-bottom:7px;
+}
+
+.card p{
+  color:#666;
+  font-size:14px;
+  margin-bottom:8px;
+}
+
+.price{
+  font-weight:bold;
+  margin:10px 0;
+}
+
+.order{
+  display:inline-block;
+  background:#16a34a;
+  color:white;
+  text-decoration:none;
+  padding:9px 15px;
+  border-radius:7px;
+}
+
+.contact{
+  background:#111827;
+  color:white;
+  text-align:center;
+  padding:35px 15px;
+}
+
+.contact p{
+  margin:10px;
+}
+
+footer{
+  background:#030712;
+  color:#aaa;
+  text-align:center;
+  padding:18px;
+  text-align:center;
+}
 </style>
 </head>
+
 <body>
+
 <header>
+
 <h1>📱 Abdullah Telecom</h1>
-<p>মোবাইল কভার • চার্জার • ডাটা কেবল • হেডফোন • টেম্পারড গ্লাস</p>
+<p>গোয়ালাবাজার • হারিছ ম্যানশন</p>
+
+<nav>
+<button onclick="showPage('home')">🏠 Home</button>
+<button onclick="showPage('products')">🛍️ Products</button>
+</nav>
+
 </header>
 
-<div class="container">
+
+<!-- HOME PAGE -->
+
+<div id="home" class="page active">
+
 <section class="hero">
-<h2>🛍️ আমাদের পণ্য</h2>
-<p>আপনার পছন্দের পণ্য কার্টে যোগ করুন এবং WhatsApp-এ অর্ডার পাঠান।</p>
+
+<h2>আপনার বিশ্বস্ত মোবাইল শপ</h2>
+
+<p>
+মোবাইল, কভার, টেম্পার, চার্জার, ব্যাটারি,
+হেডফোন, Bluetooth ও মোবাইল ব্যাক পলি-স্টিকার।
+</p>
+
+<a class="btn call" href="tel:01861564433">
+📞 Call Now
+</a>
+
+<a class="btn" href="https://wa.me/8801861564433">
+💬 WhatsApp
+</a>
+
 </section>
 
-<div class="products" id="products"></div>
 
-<section class="cart">
-<h2>🛒 আপনার কার্ট</h2>
-<div id="cartItems">কার্ট খালি</div>
-<div class="total" id="total">মোট: ৳0</div>
+<section class="section">
 
-<h3>অর্ডারের তথ্য</h3>
-<input id="name" placeholder="আপনার নাম">
-<input id="phone" placeholder="মোবাইল নম্বর">
-<textarea id="address" rows="3" placeholder="সম্পূর্ণ ঠিকানা"></textarea>
-<button class="checkout" onclick="sendOrder()">WhatsApp-এ অর্ডার কনফার্ম করুন</button>
-<p class="note">বাটনে চাপলে WhatsApp খুলবে এবং অর্ডারের তথ্য মেসেজে তৈরি থাকবে।</p>
-</section>
+<h2>⭐ জনপ্রিয় পণ্য</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="photo">📱</div>
+<h3>Mobile Cover</h3>
+<p>বিভিন্ন মডেলের কভার</p>
 </div>
 
-<footer>© Abdullah Telecom — Online Shop</footer>
+<div class="card">
+<div class="photo">🛡️</div>
+<h3>Tempered Glass</h3>
+<p>প্রিমিয়াম টেম্পার</p>
+</div>
+
+<div class="card">
+<div class="photo">🔌</div>
+<h3>Charger</h3>
+<p>বিভিন্ন ধরনের চার্জার</p>
+</div>
+
+<div class="card">
+<div class="photo">🎧</div>
+<h3>Headphone</h3>
+<p>হেডফোন ও ইয়ারফোন</p>
+</div>
+
+</div>
+
+<div style="text-align:center;margin-top:25px">
+
+<button class="btn" onclick="showPage('products')">
+🛍️ সব পণ্য দেখুন
+</button>
+
+</div>
+
+</section>
+
+
+<section class="contact">
+
+<h2>📍 Abdullah Telecom</h2>
+
+<p>গোয়ালাবাজার, হারিছ ম্যানশন</p>
+<p>📞 01861564433</p>
+
+<a class="btn call" href="tel:01861564433">
+📞 কল করুন
+</a>
+
+<a class="btn" href="https://wa.me/8801861564433">
+💬 WhatsApp
+</a>
+
+</section>
+
+</div>
+
+
+<!-- PRODUCTS PAGE -->
+
+<div id="products" class="page">
+
+<section class="section">
+
+<h2>🛍️ আমাদের সব পণ্য</h2>
+
+<div class="grid">
+
+
+<div class="card">
+<div class="photo">📱</div>
+<h3>Mobile Cover</h3>
+<p>বিভিন্ন মডেলের কভার</p>
+<div class="price">দাম জানতে কল করুন</div>
+<a class="order" href="tel:01861564433">অর্ডার করুন</a>
+</div>
+
+
+<div class="card">
+<div class="photo">🛡️</div>
+<h3>Tempered Glass</h3>
+<p>প্রিমিয়াম টেম্পার</p>
+<div class="price">দাম জানতে কল করুন</div>
+<a class="order" href="tel:01861564433">অর্ডার করুন</a>
+</div>
+
+
+<div class="card">
+<div class="photo">🔌</div>
+<h3>Charger</h3>
+<p>বিভিন্ন ধরনের চার্জার</p>
+<div class="price">দাম জানতে কল করুন</div>
+<a class="order" href="tel:01861564433">অর্ডার করুন</a>
+</div>
+
+
+<div class="card">
+<div class="photo">🎧</div>
+<h3>Headphone</h3>
+<p>হেডফোন ও ইয়ারফোন</p>
+<div class="price">দাম জানতে কল করুন</div>
+<a class="order" href="tel:01861564433">অর্ডার করুন</a>
+</div>
+
+
+<div class="card">
+<div class="photo">🔋</div>
+<h3>Battery</h3>
+<p>বিভিন্ন মোবাইলের ব্যাটারি</p>
+<div class="price">দাম জানতে কল করুন</div>
+<a class="order" href="tel:01861564433">অর্ডার করুন</a>
+</div>
+
+
+<div class="card">
+<div class="photo">✨</div>
+<h3>Back Poly & Sticker</h3>
+<p>মোবাইল ব্যাক পলি ও স্টিকার</p>
+<div class="price">দাম জানতে কল করুন</div>
+<a class="order" href="tel:01861564433">অর্ডার করুন</a>
+</div>
+
+
+<div class="card">
+<div class="photo">🎧</div>
+<h3>Bluetooth</h3>
+<p>বিভিন্ন Bluetooth ডিভাইস</p>
+<div class="price">দাম জানতে কল করুন</div>
+<a class="order" href="tel:01861564433">অর্ডার করুন</a>
+</div>
+
+
+<div class="card">
+<div class="photo">📲</div>
+<h3>Mobile Phone</h3>
+<p>বিভিন্ন মোবাইল ফোন</p>
+<div class="price">দাম জানতে কল করুন</div>
+<a class="order" href="tel:01861564433">অর্ডার করুন</a>
+</div>
+
+
+</div>
+
+<div style="text-align:center;margin-top:30px">
+
+<button class="btn call" onclick="showPage('home')">
+🏠 Home-এ ফিরে যান
+</button>
+
+</div>
+
+</section>
+
+</div>
+
+
+<footer>
+© 2026 Abdullah Telecom
+</footer>
+
 
 <script>
-const WHATSAPP_NUMBER = "8801+++++++++; // এখানে আপনার WhatsApp নম্বর বসান
 
-const products = [
- {name:"মোবাইল Back Cover", price:250, icon:"📱"},
- {name:"চার্জার", price:500, icon:"🔌"},
- {name:"ডাটা কেবল", price:200, icon:"🔗"},
- {name:"হেডফোন", price:450, icon:"🎧"},
- {name:"টেম্পারড গ্লাস", price:150, icon:"🛡️"},
- {name:"Bluetooth Earphone", price:700, icon:"🎵"}
-];
+function showPage(page){
 
-let cart=[];
+document.getElementById("home").classList.remove("active");
 
-function renderProducts(){
- const box=document.getElementById("products");
- box.innerHTML=products.map((p,i)=>`
- <div class="card">
-   <div class="pic">${p.icon}</div>
-   <h3>${p.name}</h3>
-   <div class="price">৳${p.price}</div>
-   <button onclick="addToCart(${i})">কার্টে যোগ করুন</button>
- </div>`).join("");
+document.getElementById("products").classList.remove("active");
+
+document.getElementById(page).classList.add("active");
+
+window.scrollTo(0,0);
+
 }
 
-function addToCart(i){
- const found=cart.find(x=>x.name===products[i].name);
- if(found) found.qty++;
- else cart.push({...products[i],qty:1});
- renderCart();
-}
-
-function renderCart(){
- const box=document.getElementById("cartItems");
- if(!cart.length){box.innerHTML="কার্ট খালি";document.getElementById("total").textContent="মোট: ৳0";return;}
- box.innerHTML=cart.map((x,i)=>`
- <div class="item">
-   <span>${x.name} × ${x.qty}</span>
-   <span>৳${x.price*x.qty} <button style="width:auto;padding:5px 8px;background:#dc2626" onclick="removeItem(${i})">×</button></span>
- </div>`).join("");
- const total=cart.reduce((s,x)=>s+x.price*x.qty,0);
- document.getElementById("total").textContent="মোট: ৳"+total;
-}
-
-function removeItem(i){cart.splice(i,1);renderCart();}
-
-function sendOrder(){
- if(!cart.length){alert("আগে একটি পণ্য কার্টে যোগ করুন।");return;}
- const name=document.getElementById("name").value.trim();
- const phone=document.getElementById("phone").value.trim();
- const address=document.getElementById("address").value.trim();
- if(!name||!phone||!address){alert("নাম, মোবাইল নম্বর ও ঠিকানা পূরণ করুন।");return;}
-
- const total=cart.reduce((s,x)=>s+x.price*x.qty,0);
- let msg="🛒 *নতুন অর্ডার - Abdullah Telecom*%0A%0A";
- cart.forEach(x=>{msg+=`📦 ${x.name} × ${x.qty} = ৳${x.price*x.qty}%0A`;});
- msg+=`%0A💰 *মোট: ৳${total}*%0A`;
- msg+=`👤 নাম: ${encodeURIComponent(name)}%0A`;
- msg+=`📞 ফোন: ${encodeURIComponent(phone)}%0A`;
- msg+=`📍 ঠিকানা: ${encodeURIComponent(address)}`;
-
- if(WHATSAPP_NUMBER.includes("X")){
-   alert("কোডের WHATSAPP_NUMBER-এ আপনার WhatsApp নম্বর বসান।");
-   return;
- }
- window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+msg,"_blank");
-}
-
-renderProducts();renderCart();
 </script>
+
 </body>
 </html>
