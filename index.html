@@ -3,6 +3,218 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Abdullah Telecom - Order</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:#f2f4f7;
+  padding:20px;
+}
+
+.container{
+  max-width:500px;
+  margin:auto;
+  background:white;
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 5px 20px rgba(0,0,0,.12);
+}
+
+h1{
+  text-align:center;
+  color:#111827;
+  margin-bottom:5px;
+}
+
+.subtitle{
+  text-align:center;
+  color:#666;
+  margin-bottom:25px;
+}
+
+label{
+  display:block;
+  margin-top:15px;
+  margin-bottom:7px;
+  font-weight:bold;
+}
+
+input, select, textarea{
+  width:100%;
+  padding:13px;
+  border:1px solid #ccc;
+  border-radius:9px;
+  font-size:16px;
+  outline:none;
+}
+
+input:focus, select:focus, textarea:focus{
+  border-color:#2563eb;
+}
+
+textarea{
+  height:90px;
+  resize:none;
+}
+
+button{
+  width:100%;
+  margin-top:22px;
+  padding:15px;
+  border:none;
+  border-radius:10px;
+  background:#16a34a;
+  color:white;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#15803d;
+}
+
+.shop{
+  text-align:center;
+  margin-top:20px;
+  color:#555;
+  font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📱 Abdullah Telecom</h1>
+
+<p class="subtitle">আপনার অর্ডার কনফার্ম করুন</p>
+
+<form id="orderForm">
+
+<label>পণ্য নির্বাচন করুন</label>
+
+<select id="product" required>
+  <option value="">-- পণ্য নির্বাচন করুন --</option>
+  <option>Mobile Cover</option>
+  <option>Charger</option>
+  <option>Headphone</option>
+  <option>Battery</option>
+  <option>Sticker</option>
+  <option>Bluetooth</option>
+  <option>Mobile Phone</option>
+</select>
+
+<label>মডেল / পণ্যের নাম</label>
+
+<input 
+  type="text" 
+  id="model"
+  placeholder="যেমন: iPhone 14 Pro Max"
+  required
+>
+
+<label>পরিমাণ</label>
+
+<input 
+  type="number"
+  id="quantity"
+  value="1"
+  min="1"
+  required
+>
+
+<label>আপনার নাম</label>
+
+<input 
+  type="text" 
+  id="name"
+  placeholder="আপনার নাম লিখুন"
+  required
+>
+
+<label>মোবাইল নম্বর</label>
+
+<input 
+  type="tel" 
+  id="phone"
+  placeholder="01XXXXXXXXX"
+  required
+>
+
+<label>ঠিকানা</label>
+
+<textarea 
+  id="address"
+  placeholder="আপনার সম্পূর্ণ ঠিকানা লিখুন"
+  required></textarea>
+
+<button type="submit">
+  ✅ Order Confirm করুন
+</button>
+
+</form>
+
+<div class="shop">
+📍 গোয়ালাবাজার, হারিছ ম্যানশন<br>
+📞 01861564433
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("orderForm").addEventListener("submit", function(e){
+
+  e.preventDefault();
+
+  let product = document.getElementById("product").value;
+  let model = document.getElementById("model").value;
+  let quantity = document.getElementById("quantity").value;
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let address = document.getElementById("address").value;
+
+  let message =
+`🛒 নতুন অর্ডার
+
+📦 পণ্য: ${product}
+📱 মডেল: ${model}
+🔢 পরিমাণ: ${quantity}
+
+👤 নাম: ${name}
+📞 ফোন: ${phone}
+📍 ঠিকানা: ${address}
+
+Abdullah Telecom`;
+
+  let whatsappNumber = "8801861564433";
+
+  let url = "https://wa.me/" + whatsappNumber +
+            "?text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+
+});
+
+</script>
+
+</body>
+  </html>
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Abdullah Telecom</title>
 
 <style>
@@ -395,215 +607,4 @@ window.scrollTo(0,0);
 
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="bn">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Abdullah Telecom - Order</title>
-
-<style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-  font-family:Arial,sans-serif;
-}
-
-body{
-  background:#f2f4f7;
-  padding:20px;
-}
-
-.container{
-  max-width:500px;
-  margin:auto;
-  background:white;
-  padding:25px;
-  border-radius:18px;
-  box-shadow:0 5px 20px rgba(0,0,0,.12);
-}
-
-h1{
-  text-align:center;
-  color:#111827;
-  margin-bottom:5px;
-}
-
-.subtitle{
-  text-align:center;
-  color:#666;
-  margin-bottom:25px;
-}
-
-label{
-  display:block;
-  margin-top:15px;
-  margin-bottom:7px;
-  font-weight:bold;
-}
-
-input, select, textarea{
-  width:100%;
-  padding:13px;
-  border:1px solid #ccc;
-  border-radius:9px;
-  font-size:16px;
-  outline:none;
-}
-
-input:focus, select:focus, textarea:focus{
-  border-color:#2563eb;
-}
-
-textarea{
-  height:90px;
-  resize:none;
-}
-
-button{
-  width:100%;
-  margin-top:22px;
-  padding:15px;
-  border:none;
-  border-radius:10px;
-  background:#16a34a;
-  color:white;
-  font-size:18px;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-button:hover{
-  background:#15803d;
-}
-
-.shop{
-  text-align:center;
-  margin-top:20px;
-  color:#555;
-  font-size:14px;
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-<h1>📱 Abdullah Telecom</h1>
-
-<p class="subtitle">আপনার অর্ডার কনফার্ম করুন</p>
-
-<form id="orderForm">
-
-<label>পণ্য নির্বাচন করুন</label>
-
-<select id="product" required>
-  <option value="">-- পণ্য নির্বাচন করুন --</option>
-  <option>Mobile Cover</option>
-  <option>Charger</option>
-  <option>Headphone</option>
-  <option>Battery</option>
-  <option>Sticker</option>
-  <option>Bluetooth</option>
-  <option>Mobile Phone</option>
-</select>
-
-<label>মডেল / পণ্যের নাম</label>
-
-<input 
-  type="text" 
-  id="model"
-  placeholder="যেমন: iPhone 14 Pro Max"
-  required
->
-
-<label>পরিমাণ</label>
-
-<input 
-  type="number"
-  id="quantity"
-  value="1"
-  min="1"
-  required
->
-
-<label>আপনার নাম</label>
-
-<input 
-  type="text" 
-  id="name"
-  placeholder="আপনার নাম লিখুন"
-  required
->
-
-<label>মোবাইল নম্বর</label>
-
-<input 
-  type="tel" 
-  id="phone"
-  placeholder="01XXXXXXXXX"
-  required
->
-
-<label>ঠিকানা</label>
-
-<textarea 
-  id="address"
-  placeholder="আপনার সম্পূর্ণ ঠিকানা লিখুন"
-  required></textarea>
-
-<button type="submit">
-  ✅ Order Confirm করুন
-</button>
-
-</form>
-
-<div class="shop">
-📍 গোয়ালাবাজার, হারিছ ম্যানশন<br>
-📞 01861564433
-</div>
-
-</div>
-
-<script>
-
-document.getElementById("orderForm").addEventListener("submit", function(e){
-
-  e.preventDefault();
-
-  let product = document.getElementById("product").value;
-  let model = document.getElementById("model").value;
-  let quantity = document.getElementById("quantity").value;
-  let name = document.getElementById("name").value;
-  let phone = document.getElementById("phone").value;
-  let address = document.getElementById("address").value;
-
-  let message =
-`🛒 নতুন অর্ডার
-
-📦 পণ্য: ${product}
-📱 মডেল: ${model}
-🔢 পরিমাণ: ${quantity}
-
-👤 নাম: ${name}
-📞 ফোন: ${phone}
-📍 ঠিকানা: ${address}
-
-Abdullah Telecom`;
-
-  let whatsappNumber = "8801861564433";
-
-  let url = "https://wa.me/" + whatsappNumber +
-            "?text=" + encodeURIComponent(message);
-
-  window.open(url, "_blank");
-
-});
-
-</script>
-
-</body>
-</html>
+<
